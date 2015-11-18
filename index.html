@@ -1,22 +1,23 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 	<head>
 
-		<title>Bitcoin Wallet by Coinb.in</title>
+		<title>Download Time Calculator</title>
 
         	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
-		<meta name="keywords" content="bitcoin, wallet, multisig, multisignature, address, browser, javascript, js, broadcast, transaction, verify, decode" />
-		<meta name="description" content="A Bitcoin Wallet written in Javascript. Supports Multisig, Custom Transactions, nLockTime and more!" />
+		<meta name="keywords" content="replace-me" />
+		<meta name="description" content="replace-me" />
 
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<link rel="stylesheet" href="css/bootstrap.min.css" media="screen">
 		<link rel="stylesheet" href="css/style.css" media="screen">
-		
+
 		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
 
+<!-- Remember to remove unneeded scripts before release! They are here now just so the code doesn't break during development. -->
 		<script type="text/javascript" src="js/crypto-min.js"></script>
 		<script type="text/javascript" src="js/crypto-sha256.js"></script>
 		<script type="text/javascript" src="js/crypto-sha256-hmac.js"></script>
@@ -83,14 +84,64 @@
 							</div>
 						</div>
 
+<!--
 						<div class="jumbotron">
 							<h1>Bitcoin. It's your money!</h1>
 							<p>Be your own bank, take control of your own money and start using Bitcoin today!</p>
 							<p><a class="btn btn-primary btn-lg" href="#about" role="button">Learn more &raquo;</a></p>
 						</div>
+-->
 
 						<hr>
 
+						<!-- File Size -->
+						<div class="row">
+							<div class="col-md-6">
+								<h3><span class="glyphicon glyphicon-floppy-disk"></span> File Size</h3>
+								<p>File size textfield goes here change-me</p>
+							</div>
+							<div class="col-md-6">
+								<h3><span class="glyphicon glyphicon-globe"></span> Upload or Download</h3>
+								<p>Download and Upload Checkboxes goes here change-me</p>
+							</div>
+						</div>
+
+						<br>
+
+						<!-- Speed -->
+						<div class="row">
+							<!-- when user checkmarks upload, download-speed hides while upload-speed becomes visible -->
+							<div class="col-md-4">
+								<div id="download">
+									<h3><span class="glyphicon glyphicon-cloud-download"></span> Download Speed</h3>
+								</div>
+								<div id="upload" class="hidden">
+									<h3><span class="glyphicon glyphicon-cloud-download"></span> Upload Speed</h3>
+								</div>
+								<p>download/upload speed textfield goes here change-me</p>
+							</div>
+							<div class="col-md-2">
+								<h3>or</h3>
+							</div>
+							<div class="col-md-4">
+								<h3>Automatic Test Speed</h3>
+								<p>explain what it does change-me</p>
+							</div>
+						</div>
+
+						<br>
+
+						<!-- Download Time -->
+						<div class="row">
+							<div class="col-md-6">
+								<h2><span class="glyphicon glyphicon-time"></span> Estimated Time:</h2>
+							</div>
+							<div id="download-time" class="col-md-6">
+								<h2>1 hour and 15 minutes</h2>
+							</div>
+						</div>
+
+<!--
 						<div class="row">
 							<div class="col-md-4">
 								<h3><span class="glyphicon glyphicon-ok"></span> Open Source</h3>
@@ -124,6 +175,7 @@
 								<p>Use what we've built to write your own projects! See our documention (coming soon), or contribute at <a href="https://github.com/OutCast3k/coinbin/">github</a>.</p>
 							</div>
 						</div>
+-->
 					</div>
 
 					<div class="tab-pane tab-content" id="wallet">
@@ -136,7 +188,7 @@
 										<p>Use the form below to open a wallet and begin using this service.</p>
 
 										<div class="alert alert-warning">
-											<b>Notice</b>: Different email address and password combination will open different wallets, be careful when entering your details as lost accounts can not be recovered! 
+											<b>Notice</b>: Different email address and password combination will open different wallets, be careful when entering your details as lost accounts can not be recovered!
 										</div>
 
 										<input id="openEmail" type="email" class="form-control" placeholder="Email address" required autofocus>
@@ -399,7 +451,7 @@
 
 						<h3>Address Options</h3>
 						<p>You can use the advanced options below to generate different kinds of master addresses.</p>
-						
+
 						<div class="checkbox">
 							<label><input type="checkbox" id="newHDBrainwallet" class="checkbox-inline"> Custom Seed or Brain Wallet</label>
 							<input type="text" class="form-control hidden" id="HDBrainwallet">
@@ -782,7 +834,7 @@
 							<p>The above transaction has been signed:</p>
 
                         				<textarea class="form-control script" style="height:160px" readonly></textarea>
-                                    
+
 							<p class="text-muted">Size: <span class="txSize">0</span> <i>bytes</i></p>
 						</div>
 
@@ -805,7 +857,7 @@
 					<div class="tab-pane tab-content" id="dev">
 						<h2>Development <small>Javascript framework, API and more</small></h2>
 						<div class="alert alert-info">This section is currently under development and is subject to change.</div>
-						
+
 					</div>
 
 					<div class="tab-pane tab-content" id="about">
@@ -898,7 +950,7 @@
 								</select>
 							</div>
 						</div>
-							
+
 						<hr>
 
 						<div class="row">
@@ -1024,9 +1076,9 @@
 						<div class="col-md-5">
 							<label>Mediator:</label>
 
-							<!-- 
-								You need to contact us before adding your pubkey 
-								and submitting a pull request on github. 
+							<!--
+								You need to contact us before adding your pubkey
+								and submitting a pull request on github.
 
 								format is: pubkey;email;fee
 							-->
@@ -1038,12 +1090,12 @@
 
 						<div class="col-md-5">
 							<label>Address:</label> <span class="text-muted">(for disputes)</span>
-							<input id="mediatorEmail" type="text" class="form-control address" value="" readonly>	
+							<input id="mediatorEmail" type="text" class="form-control address" value="" readonly>
 						</div>
 
 						<div class="col-md-2">
-							<label>Fee (%):</label> 
-							<input id="mediatorFee" type="text" class="form-control address" value="" readonly>	
+							<label>Fee (%):</label>
+							<input id="mediatorFee" type="text" class="form-control address" value="" readonly>
 						</div>
 
 					</div>
